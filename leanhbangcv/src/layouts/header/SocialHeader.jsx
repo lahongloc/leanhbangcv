@@ -1,18 +1,46 @@
-// App.js
-import React from "react";
-import { Layout, Menu, Typography } from "antd";
+import React, { useEffect, useState } from "react";
+import { Layout, Menu, Typography, Drawer, Button } from "antd";
 import {
+	MenuOutlined,
 	FacebookOutlined,
 	TwitterOutlined,
 	LinkedinOutlined,
 	GooglePlusOutlined,
 } from "@ant-design/icons";
+import { useNavigate, useLocation } from "react-router-dom";
+import paths from "../../database/path";
 import "./SocialHeader.css";
 
 const { Header } = Layout;
 const { Title } = Typography;
 
 const SocialHeader = () => {
+	const navigate = useNavigate();
+	const location = useLocation();
+	const [selectedKey, setSelectedKey] = useState("home");
+	const [drawerVisible, setDrawerVisible] = useState(false); // State for Drawer visibility
+
+	// Update selectedKey based on current path
+	useEffect(() => {
+		const currentPath = location.pathname;
+		if (currentPath === "/") {
+			setSelectedKey("home");
+		} else if (currentPath === paths.projects) {
+			setSelectedKey("projects");
+		} else if (currentPath === "/charity") {
+			setSelectedKey("charity");
+		}
+	}, [location.pathname]);
+
+	// Show or hide Drawer
+	const showDrawer = () => {
+		setDrawerVisible(true);
+	};
+
+	const hideDrawer = () => {
+		setDrawerVisible(false);
+	};
+
 	return (
 		<Header className="social-header">
 			{/* Logo */}
@@ -22,26 +50,43 @@ const SocialHeader = () => {
 				</Title>
 			</div>
 
-			{/* Navigation Links */}
-			<Menu theme="light" mode="horizontal" className="nav-menu">
+			<Menu
+				theme="light"
+				mode="horizontal"
+				className="nav-menu"
+				selectedKeys={[selectedKey]}
+			>
 				<Menu.Item key="home">
-					<a href="#home" className="nav-link">
+					<a
+						onClick={(e) => {
+							e.preventDefault();
+							navigate(paths.home);
+						}}
+						className="nav-link"
+					>
 						Home
 					</a>
 				</Menu.Item>
 				<Menu.Item key="projects">
-					<a href="#projects" className="nav-link">
+					<a
+						onClick={(e) => {
+							e.preventDefault();
+							navigate(paths.projects);
+						}}
+						className="nav-link"
+					>
 						Projects
 					</a>
 				</Menu.Item>
 				<Menu.Item key="charity">
-					<a href="#charity" className="nav-link">
+					<a
+						onClick={(e) => {
+							e.preventDefault();
+							navigate("/charity");
+						}}
+						className="nav-link"
+					>
 						Charity & Community
-					</a>
-				</Menu.Item>
-				<Menu.Item key="contact">
-					<a href="#contact" className="nav-link">
-						Contact
 					</a>
 				</Menu.Item>
 			</Menu>
@@ -85,6 +130,57 @@ const SocialHeader = () => {
 					</a>
 				</Menu.Item>
 			</Menu>
+
+			<Button
+				className="menu-button"
+				icon={<MenuOutlined />}
+				onClick={showDrawer}
+			/>
+			{/* Drawer for mobile menu */}
+			<Drawer
+				className="menu-drawer"
+				title="Menu"
+				placement="right"
+				onClose={hideDrawer}
+				visible={drawerVisible}
+			>
+				<Menu
+					mode="vertical"
+					selectedKeys={[selectedKey]}
+					onClick={() => hideDrawer()}
+				>
+					<Menu.Item key="home">
+						<a
+							onClick={(e) => {
+								e.preventDefault();
+								navigate(paths.home);
+							}}
+						>
+							Home
+						</a>
+					</Menu.Item>
+					<Menu.Item key="projects">
+						<a
+							onClick={(e) => {
+								e.preventDefault();
+								navigate(paths.projects);
+							}}
+						>
+							Projects
+						</a>
+					</Menu.Item>
+					<Menu.Item key="charity">
+						<a
+							onClick={(e) => {
+								e.preventDefault();
+								navigate("/charity");
+							}}
+						>
+							Charity & Community
+						</a>
+					</Menu.Item>
+				</Menu>
+			</Drawer>
 		</Header>
 	);
 };

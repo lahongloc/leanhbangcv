@@ -56,8 +56,8 @@ const Experience = () => {
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
-				height: "100vh",
-				marginTop: "3rem",
+				// height: "100vh",
+				// marginTop: "3rem",
 			}}
 		>
 			<div

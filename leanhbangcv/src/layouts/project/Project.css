@@ -1,0 +1,34 @@
+
+/* Project.css */
+.project-container-laptop {
+    background-color: black !important;
+    color: #fff;
+    height: max-content;
+    padding: 3rem 0 7rem 5rem !important;
+    /* Make text white */
+}
+
+.ant-tabs-tab-btn {
+    color: #fff !important;
+    /* Ensure tab labels are white */
+}
+
+.ant-tabs-content-holder {
+    color: #fff;
+    /* Ensure tab content is white */
+}
+
+.ant-radio-button-wrapper {
+    color: #fff !important;
+    /* Make radio button text white */
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.video-item {
+    width: 30%;
+}

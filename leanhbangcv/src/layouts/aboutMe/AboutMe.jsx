@@ -58,12 +58,12 @@ const AboutMe = () => {
 				<Col xs={24} md={16}>
 					<Card className="about-me-card" bordered={false}>
 						{/* Tag Logo inside Card */}
-						{/* <Tag className="about-me-tag animate__animated animate__pulse">
+						<Tag className="about-me-tag animate__animated animate__pulse">
 							BANG LE
-						</Tag> */}
-						<div style={{ marginBottom: "2rem" }}>
+						</Tag>
+						{/* <div style={{ marginBottom: "2rem" }}>
 							<Terminal />
-						</div>
+						</div> */}
 
 						{/* Original layout for larger screens */}
 						<div className="about-me-details">

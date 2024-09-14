@@ -7,13 +7,6 @@
     .mobile {
         display: block;
     }
-
-    .section-3 {
-        height: 220vh !important;
-    }
-    .section-2 {
-        height: 100vh !important;
-    }
 }
 
 /* Tablet and Larger Screens */

@@ -1,6 +1,7 @@
 import React from "react";
 import { awards } from "../../database/data";
 import AwardCard from "../../components/awardCard/AwardCard";
+import AwardIntroduction from "../../components/awardIntroduction/AwardIntroduction";
 
 const Awards = () => {
 	return (
@@ -12,21 +13,10 @@ const Awards = () => {
 				height: "70vh",
 			}}
 		>
-			{" "}
+			<div style={{ zIndex: "1", marginRight: "1.5rem" }}>
+				<AwardIntroduction />
+			</div>
 			<div className="content">
-				<h2
-					style={{
-						textAlign: "left",
-						marginBottom: "16px",
-						color: "#fff",
-						// backgroundColor: "#fff",
-						width: "fit-content",
-						// borderRadius: "7px",
-						// display: "inline",
-					}}
-				>
-					Awards & Achievements
-				</h2>
 				<div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
 					{awards.map((award) => (
 						<AwardCard

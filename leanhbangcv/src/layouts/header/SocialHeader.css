@@ -1,10 +1,19 @@
 /* SocialHeader.css */
+/* SocialHeader.css */
+.nav-link {
+    color: #fff !important;
+    /* Set the text color to white */
+}
 
+.nav-link:hover {
+    color: #ccc !important;
+    /* Optional: Add hover effect with a lighter color */
+}
 /* Header Styling */
 .social-header {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -61,18 +70,30 @@
     /* Hover effect */
 }
 
+
+
+.menu-button {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .social-header {
         padding: 0 20px;
     }
 
-    .nav-menu {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
+   
     .nav-link {
         padding: 0 10px;
     }
+
+        .menu-button {
+            display: block;
+        }
+
+        .nav-menu {
+            display: none;
+        }
+       
+    
 }

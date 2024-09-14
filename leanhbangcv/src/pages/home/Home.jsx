@@ -11,6 +11,7 @@ import "./Home.css";
 import MobileAwards from "../../mobile-layouts/awards/MobileAwards";
 import MobileAboutMe from "../../mobile-layouts/aboutMe/MobileAboutMe";
 import MyCarousel from "../../components/carousel/MyCarousel";
+import AwardIntroduction from "../../components/awardIntroduction/AwardIntroduction";
 
 const Home = () => {
 	return (
@@ -18,7 +19,7 @@ const Home = () => {
 			{/* Section 1 */}
 			<div
 				style={{
-					height: "100vh",
+					height: "120vh",
 					backgroundColor: "#FF5733",
 					backgroundImage: `url(${travel})`,
 					backgroundRepeat: "no-repeat",
@@ -34,14 +35,15 @@ const Home = () => {
 			{/* Section 2 */}
 			<div
 				style={{
-					height: "100vh",
+					height: "max-content",
 					textAlign: "center",
 					display: "flex",
 					justifyContent: "center",
 					alignItems: "center",
-					backgroundColor: "black",
+					backgroundColor: "rgb(10 16 30)",
 					color: "#fff",
 				}}
+				className="section-2"
 			>
 				<Parallax speed={12}>
 					<div className="laptop">
@@ -56,7 +58,7 @@ const Home = () => {
 			{/* Section 3 */}
 			<div
 				style={{
-					height: "max-content",
+					height: "120vh",
 					textAlign: "center",
 					display: "flex",
 					justifyContent: "center",
@@ -83,6 +85,7 @@ const Home = () => {
 				style={{
 					display: "block !important",
 					backgroundColor: "rgb(36 36 36)",
+					paddingBottom: "5rem",
 				}}
 			>
 				<div className="laptop">

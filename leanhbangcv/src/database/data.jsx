@@ -107,3 +107,61 @@ export const awards = [
 		achievement: "2 Bronze Medals",
 	},
 ];
+
+export const projects = [
+	{
+		project: "Music Producer and Composer",
+		products: [
+			{
+				name: "Trôi - Into The Air",
+				video: "https://www.youtube.com/embed/bJtsVoGWLwg?si=-97wKwQlUe4mu_LV",
+			},
+			{
+				name: "Lỡ - Into The Air",
+				video: "https://www.youtube.com/embed/lyPmZpyHL-M?si=y8p8X6JEpepqiIE4",
+			},
+			{
+				name: "Viết Cho Em - Into The Air",
+				video: "https://www.youtube.com/embed/5nGtS01f1UU?si=Xn-GxQl_gyM9b6HY",
+			},
+			{
+				name: "Chạy - Into The Air",
+				video: "https://www.youtube.com/embed/AzckoYoRJT0?si=_j1euJUvYkJB_1Wz",
+			},
+		],
+	},
+	{
+		project: "Production Assisstant",
+		products: [
+			{
+				name: "Đông rồi tây - The Flob (MV)",
+				video: "https://www.youtube.com/embed/Zw4Q8OjCg_E?si=3f-MlOx2NUVeX1R2",
+			},
+			{
+				name: "CUỐI NGÀY (Hoành Tráng ver.) - The Flob (MV)",
+				video: "https://www.youtube.com/embed/zruqus4_ENo?si=dXO1GlbP7ZzX6oam",
+			},
+			{
+				name: "Nhạc Chơi - The Flob (MV)",
+				video: "https://www.youtube.com/embed/F32Ro8RTiHU?si=-isqulJ7Pu_Sk280",
+			},
+			{
+				name: "232 - The Flob (MV)",
+				video: "https://www.youtube.com/embed/N8Y_X5wZa-E?si=039uAEN4FmixkDW6",
+			},
+		],
+	},
+	{
+		project: "Actor and Others",
+		products: [
+			{
+				name: "Wish - GDucky",
+				video: "https://www.youtube.com/embed/mMXdEVn_uZQ?si=yY3pkIc_AC6sadjp",
+			},
+			{
+				name: "Vinama TVC Production",
+				video: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FCtyVinama%2Fvideos%2F155523824297844%2F&show_text=false&width=560&t=0",
+			},
+		],
+	},
+];
