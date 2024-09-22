@@ -93,15 +93,6 @@ const SocialHeader = () => {
 
 			{/* Social Media Links */}
 			<Menu theme="light" mode="horizontal" className="social-menu">
-				<Menu.Item key="1">
-					<a
-						href="https://twitter.com"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<TwitterOutlined className="social-icon" />
-					</a>
-				</Menu.Item>
 				<Menu.Item key="2">
 					<a
 						href="https://www.facebook.com/profile.php?id=100010204443486"
@@ -109,15 +100,6 @@ const SocialHeader = () => {
 						rel="noopener noreferrer"
 					>
 						<FacebookOutlined className="social-icon" />
-					</a>
-				</Menu.Item>
-				<Menu.Item key="3">
-					<a
-						href="https://plus.google.com"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<GooglePlusOutlined className="social-icon" />
 					</a>
 				</Menu.Item>
 				<Menu.Item key="4">

@@ -6,16 +6,29 @@ import paths from "../../database/path";
 
 const { Text } = Typography;
 
-const AwardCard = ({ event, achievement, awardId }) => {
+const AwardCard = ({ event, achievement, awardId, des }) => {
 	const navigate = useNavigate();
+
 	const getIcon = (achievement) => {
 		switch (achievement) {
 			case "Finalist":
-				return <TrophyOutlined style={{ color: "#ffd700" }} />;
+				return (
+					<TrophyOutlined
+						style={{ color: "#ffd700", fontSize: "24px" }}
+					/>
+				);
 			case "Semi-Final":
-				return <StarOutlined style={{ color: "#ffa500" }} />;
+				return (
+					<StarOutlined
+						style={{ color: "#ffa500", fontSize: "24px" }}
+					/>
+				);
 			default:
-				return <LikeOutlined style={{ color: "#b87333" }} />;
+				return (
+					<LikeOutlined
+						style={{ color: "#b87333", fontSize: "24px" }}
+					/>
+				);
 		}
 	};
 
@@ -25,9 +38,12 @@ const AwardCard = ({ event, achievement, awardId }) => {
 				backgroundColor: "#1d1d1d", // Màu nền tối
 				marginBottom: "16px",
 				borderRadius: "8px",
-				boxShadow: "0 4px 8px rgba(0,0,0,0.5)", // Hiệu ứng đổ bóng đậm hơn
+				boxShadow: "0 4px 8px rgba(0,0,0,0.5)", // Hiệu ứng đổ bóng
 				color: "#fff", // Màu chữ sáng
-				display: "inline-block",
+				display: "block",
+				width: "100%",
+				height: "max-content",
+				maxWidth: "400px",
 			}}
 			hoverable
 			bordered={false}
@@ -36,12 +52,13 @@ const AwardCard = ({ event, achievement, awardId }) => {
 			<div
 				style={{
 					display: "flex",
+					flexDirection: "row",
 					alignItems: "center",
-					justifyContent: "center",
+					justifyContent: "flex-start",
 				}}
 			>
-				{getIcon(achievement)}
-				<div style={{ marginLeft: "12px" }}>
+				<div style={{ flexShrink: 0 }}>{getIcon(achievement)}</div>
+				<div style={{ marginLeft: "12px", flexGrow: 1 }}>
 					<Text
 						style={{
 							fontWeight: "bold",
@@ -49,16 +66,26 @@ const AwardCard = ({ event, achievement, awardId }) => {
 							color: "#fff",
 						}}
 					>
-						{" "}
-						{/* Chữ màu trắng */}
 						{event}
 					</Text>
 					<br />
-					<Text type="secondary" style={{ color: "#aaa" }}>
-						{" "}
-						{/* Chữ màu xám nhạt cho phần phụ */}
+					<Text
+						type="secondary"
+						style={{ color: "#aaa", fontSize: "14px" }}
+					>
 						{achievement}
 					</Text>
+					<div
+						style={{
+							marginTop: "8px",
+							color: "#ddd",
+							fontSize: "14px",
+							maxHeight: "100px", // Giới hạn chiều cao
+							height: "100px",
+						}}
+					>
+						{des}
+					</div>
 				</div>
 			</div>
 		</Card>

@@ -21,7 +21,7 @@ const Home = () => {
 				style={{
 					height: "120vh",
 					backgroundColor: "#FF5733",
-					backgroundImage: `url(${travel})`,
+					backgroundImage: `url(https://res.cloudinary.com/dbfh15hki/image/upload/v1727007094/IMG_5990_ngang_hg1twk.jpg)`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 					backgroundPosition: "center",
@@ -58,12 +58,12 @@ const Home = () => {
 			{/* Section 3 */}
 			<div
 				style={{
-					height: "120vh",
+					// height: "170vh",
 					textAlign: "center",
 					display: "flex",
 					justifyContent: "center",
 					alignItems: "center",
-					backgroundImage: `url(${exp})`,
+					backgroundImage: `url(https://res.cloudinary.com/dbfh15hki/image/upload/v1727007095/IMG_2553_ubnxey.jpg)`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 					backgroundPosition: "center",
@@ -77,7 +77,7 @@ const Home = () => {
 
 					<div className="mobile">
 						<MobileExperience />
-						<MobileAwards />
+						{/* <MobileAwards /> */}
 					</div>
 				</Parallax>
 			</div>
@@ -86,13 +86,17 @@ const Home = () => {
 					display: "block !important",
 					backgroundColor: "rgb(36 36 36)",
 					paddingBottom: "5rem",
+					paddingTop: "10rem",
 				}}
 			>
 				<div className="laptop">
 					<Awards />
 				</div>
+				<div className="mobile">
+					<MobileAwards />
+				</div>
 
-				<MyCarousel />
+				{/* <MyCarousel /> */}
 			</div>
 		</ParallaxProvider>
 	);

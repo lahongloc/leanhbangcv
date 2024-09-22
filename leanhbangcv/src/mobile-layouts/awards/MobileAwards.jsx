@@ -1,47 +1,66 @@
 import React from "react";
+import { Row, Col, Card, Typography, Divider } from "antd";
 import { awards } from "../../database/data";
-import AwardCard from "../../components/awardCard/AwardCard";
-import "./Awards.css";
-import { Carousel } from "antd";
+
+const { Title, Text } = Typography;
 
 const MobileAwards = () => {
 	return (
 		<div
 			style={{
-				display: "flex",
-				flexDirection: "column",
-				alignItems: "center",
+				maxWidth: "90%",
+				margin: "0 auto",
 				padding: "16px",
+				background: "#1f1f1f",
+				borderRadius: "16px",
+				boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
+				color: "#fff",
 			}}
 		>
-			<h2
-				style={{
-					textAlign: "center",
-					marginBottom: "16px",
-					color: "#fff",
-				}}
-			>
-				Awards & Achievements
-			</h2>
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					gap: "16px",
-				}}
-			>
-				<Carousel arrows dotPosition="left" infinite={false}>
-					{awards.map((award, index) => (
-						<div>
-							<AwardCard
-								key={index}
-								event={award.event}
-								achievement={award.achievement}
-							/>
-						</div>
-					))}
-				</Carousel>
-			</div>
+			<Title level={3} style={{ color: "#fff", textAlign: "center" }}>
+				Awards
+			</Title>
+			<Row gutter={[16, 16]}>
+				{awards.map((award) => (
+					<Col span={24} key={award.id}>
+						<Card
+							hoverable
+							style={{
+								background: "#333",
+								borderRadius: "8px",
+								color: "#fff",
+								marginBottom: "16px",
+							}}
+						>
+							<Title level={4} style={{ color: "#fff" }}>
+								{award.event}
+							</Title>
+							<Text type="secondary" style={{ color: "#ccc" }}>
+								<strong>Achievement:</strong>{" "}
+								{award.achievement}
+							</Text>
+							<Divider style={{ borderColor: "#444" }} />
+							<Text style={{ color: "#ddd" }}>{award.des}</Text>
+							<Row gutter={[8, 8]} style={{ marginTop: 16 }}>
+								{award.images.map((image, index) => (
+									<Col xs={12} key={index}>
+										<img
+											alt={`award-${index}`}
+											src={image}
+											style={{
+												borderRadius: "8px",
+												width: "100%",
+												height: "auto",
+												objectFit: "cover",
+											}}
+										/>
+									</Col>
+								))}
+							</Row>
+						</Card>
+					</Col>
+				))}
+			</Row>
 		</div>
 	);
 };

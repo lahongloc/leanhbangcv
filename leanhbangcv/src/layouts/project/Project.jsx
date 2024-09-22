@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tabs } from "antd";
 import "./Project.css";
 import { projects } from "../../database/data";
@@ -21,7 +21,21 @@ const Project = () => {
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
 						></iframe>
-						<h3>{product.name}</h3>
+
+						<div className="product-title">
+							{product.logo && (
+								<img
+									src={product.logo}
+									alt={product.name}
+									className="logo-image"
+								/>
+							)}
+							<h3>{product.name}</h3>
+						</div>
+
+						{product.des && (
+							<p className="product-description">{product.des}</p>
+						)}
 					</div>
 				))}
 			</div>

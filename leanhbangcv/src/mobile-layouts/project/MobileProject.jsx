@@ -11,7 +11,7 @@ const VideoDisplay = ({ products }) => {
 		<Row gutter={[16, 16]} justify="start">
 			{products.map((product, index) => (
 				<Col span={24} key={index}>
-					<div class="video-container">
+					<div className="video-container">
 						<iframe
 							width="100%"
 							height="315"
@@ -20,11 +20,28 @@ const VideoDisplay = ({ products }) => {
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
 						></iframe>
-						<Title level={5}>
-							{product.name.length > 20
-								? `${product.name.slice(0, 20)}...`
-								: product.name}
-						</Title>
+					</div>
+					{/* Phần thông tin sản phẩm nằm ngoài container video */}
+					<div className="product-info">
+						<div className="product-title">
+							{product.logo && (
+								<img
+									src={product.logo}
+									alt={product.name}
+									className="logo-image"
+								/>
+							)}
+							<Title level={5} className="product-name">
+								{product.name.length > 20
+									? `${product.name.slice(0, 20)}...`
+									: product.name}
+							</Title>
+						</div>
+						<p className="product-description">
+							{product?.des?.length > 100
+								? `${product.des.slice(0, 100)}...`
+								: ""}
+						</p>
 					</div>
 				</Col>
 			))}
@@ -44,7 +61,7 @@ const MobileProject = () => {
 		<div className="project-container">
 			<Select
 				defaultValue={selectedProject.project}
-				style={{ width: 300, marginBottom: 20 }}
+				style={{ width: "100%", marginBottom: 20 }}
 				onChange={handleChange}
 				className="project-selector"
 			>

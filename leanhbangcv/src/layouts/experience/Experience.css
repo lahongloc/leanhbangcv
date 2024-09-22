@@ -1,22 +1,38 @@
-/* Experience.css */
-.ant-table {
-    background-color: rgb(0 0 0 / 25%) !important;
-    /* Nền tối cho bảng */
+.work-experience-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
 }
 
-.ant-table-thead>tr>th {
-    background-color: #333 !important;
-    /* Nền tối cho tiêu đề */
-    color: #fff !important;
-    /* Chữ trắng cho tiêu đề */
+.company-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 300px;
+    /* Cố định chiều cao cho card */
 }
 
-.ant-table-tbody>tr>td {
-    color: #fff !important;
-    /* Chữ trắng cho dữ liệu bảng */
+.company-card:hover {
+    transform: translateY(-10px);
 }
 
-.ant-table-tbody>tr:hover>td {
-    background-color: rgb(0 0 0 / 25%) !important;
-    /* Nền tối khi hover */
+.company-image {
+    width: 100%;
+    height: 200px;
+    /* Cố định chiều cao cho ảnh */
+    object-fit: contain;
+    /* Đảm bảo ảnh được thu nhỏ và giữ nguyên tỉ lệ */
+    background-color: #f0f0f0;
+    /* Màu nền để làm nổi bật ảnh khi có khoảng trống */
+}
+
+.ant-card-meta-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
 }
