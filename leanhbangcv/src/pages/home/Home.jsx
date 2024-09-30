@@ -19,12 +19,13 @@ const Home = () => {
 			{/* Section 1 */}
 			<div
 				style={{
-					height: "120vh",
+					height: "150vh",
 					backgroundColor: "#FF5733",
-					backgroundImage: `url(https://res.cloudinary.com/dbfh15hki/image/upload/v1727007094/IMG_5990_ngang_hg1twk.jpg)`,
+					backgroundImage: `url(https://res.cloudinary.com/dbfh15hki/image/upload/v1727710007/Ba%CC%86%CC%80ng_autograph_ghw9wd.png)`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 					backgroundPosition: "center",
+					marginTop: "-15rem",
 				}}
 			>
 				<Parallax speed={-17}>
