@@ -68,9 +68,7 @@ const AboutMe = () => {
 						{/* Original layout for larger screens */}
 						<div className="about-me-details">
 							<Title className="about-me-title" level={2}>
-								<span style={{ color: "yellow" }}>
-									About Me
-								</span>
+								<span style={{ color: "#fff" }}>About Me</span>
 							</Title>
 
 							<div className="about-me-item">

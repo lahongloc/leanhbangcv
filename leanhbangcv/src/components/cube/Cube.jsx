@@ -9,19 +9,17 @@ const Cube = () => {
 			</div>
 			<div
 				style={{
-					marginLeft: "20rem",
+					marginLeft: "25rem",
 					marginTop: "-2rem",
 					fontFamily: "arial",
 				}}
 			>
 				<h1
 					style={{
-						textTransform: "uppercase",
-						textDecoration: "underline",
-						color: "rgb(187, 171, 189)",
+						color: "#fff",
 					}}
 				>
-					<i>Welcome you to my projects zone!</i>
+					All My Works!
 				</h1>
 			</div>
 		</>

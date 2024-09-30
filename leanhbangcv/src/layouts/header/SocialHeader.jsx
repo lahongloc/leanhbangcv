@@ -27,7 +27,7 @@ const SocialHeader = () => {
 			setSelectedKey("home");
 		} else if (currentPath === paths.projects) {
 			setSelectedKey("projects");
-		} else if (currentPath === "/charity") {
+		} else if (currentPath === paths.charitiesAndComunity) {
 			setSelectedKey("charity");
 		}
 	}, [location.pathname]);
@@ -46,7 +46,7 @@ const SocialHeader = () => {
 			{/* Logo */}
 			<div className="logo">
 				<Title level={3} className="logo-title">
-					BangLe
+					<span style={{ color: "gray" }}>BangLe</span>
 				</Title>
 			</div>
 
@@ -82,7 +82,7 @@ const SocialHeader = () => {
 					<a
 						onClick={(e) => {
 							e.preventDefault();
-							navigate("/charity");
+							navigate(paths.charitiesAndComunity);
 						}}
 						className="nav-link"
 					>
@@ -155,7 +155,7 @@ const SocialHeader = () => {
 						<a
 							onClick={(e) => {
 								e.preventDefault();
-								navigate("/charity");
+								navigate(paths.charitiesAndComunity);
 							}}
 						>
 							Charity & Community

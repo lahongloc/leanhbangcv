@@ -37,16 +37,16 @@ const MobileAboutMe = () => {
 				<Title
 					level={2}
 					style={{
-						color: "yellow",
+						color: "#fff",
 						textAlign: "left",
 						display: "flex",
 						alignItems: "center",
 					}}
 				>
 					<UserOutlined
-						style={{ marginRight: "8px", color: "yellow" }}
+						style={{ marginRight: "8px", color: "#fff" }}
 					/>{" "}
-					<span style={{ color: "yellow" }}>
+					<span style={{ color: "#fff" }}>
 						{personalInformation.fullname}
 					</span>
 				</Title>

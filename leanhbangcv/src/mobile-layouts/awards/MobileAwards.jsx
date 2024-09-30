@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Card, Typography, Divider } from "antd";
 import { awards } from "../../database/data";
+import CertificateComponent from "../../components/certificate/CertificateComponent";
 
 const { Title, Text } = Typography;
 
@@ -61,6 +62,7 @@ const MobileAwards = () => {
 					</Col>
 				))}
 			</Row>
+			<CertificateComponent />
 		</div>
 	);
 };

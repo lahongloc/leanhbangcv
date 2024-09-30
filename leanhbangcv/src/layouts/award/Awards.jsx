@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs, Row, Col, Card, Typography, Divider } from "antd";
 import { awards } from "../../database/data";
+import CertificateComponent from "../../components/certificate/CertificateComponent";
 
 const { TabPane } = Tabs;
 const { Title, Text } = Typography;
@@ -73,6 +74,7 @@ const Awards = () => {
 					</TabPane>
 				))}
 			</Tabs>
+			<CertificateComponent />
 		</div>
 	);
 };

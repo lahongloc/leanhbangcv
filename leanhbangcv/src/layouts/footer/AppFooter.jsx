@@ -7,6 +7,7 @@ import {
 	FacebookOutlined,
 	TwitterOutlined,
 	InstagramOutlined,
+	LinkedinOutlined,
 } from "@ant-design/icons";
 
 const { Footer } = Layout;
@@ -30,14 +31,7 @@ const AppFooter = () => {
 					</Title>
 					<Space direction="vertical" size="middle">
 						<Text style={{ color: "#fff" }}>
-							<MailOutlined /> Email: example@example.com
-						</Text>
-						<Text style={{ color: "#fff" }}>
-							<PhoneOutlined /> Phone: +123 456 789
-						</Text>
-						<Text style={{ color: "#fff" }}>
-							<HomeOutlined /> Address: 123 ABC Street, City,
-							Country
+							<HomeOutlined /> Ho Chi Minh City, Vietnam Country
 						</Text>
 					</Space>
 				</Col>
@@ -49,7 +43,7 @@ const AppFooter = () => {
 					</Title>
 					<Space size="middle">
 						<a
-							href="https://www.facebook.com"
+							href="https://www.facebook.com/profile.php?id=100010204443486"
 							target="_blank"
 							rel="noopener noreferrer"
 							style={{ color: "#fff" }}
@@ -57,20 +51,11 @@ const AppFooter = () => {
 							<FacebookOutlined style={{ fontSize: "24px" }} />
 						</a>
 						<a
-							href="https://www.twitter.com"
+							href="https://www.linkedin.com/in/b%E1%BA%B1ng-l%C3%AA-anh-4728b7231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
 							target="_blank"
 							rel="noopener noreferrer"
-							style={{ color: "#fff" }}
 						>
-							<TwitterOutlined style={{ fontSize: "24px" }} />
-						</a>
-						<a
-							href="https://www.instagram.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							style={{ color: "#fff" }}
-						>
-							<InstagramOutlined style={{ fontSize: "24px" }} />
+							<LinkedinOutlined className="social-icon" />
 						</a>
 					</Space>
 				</Col>

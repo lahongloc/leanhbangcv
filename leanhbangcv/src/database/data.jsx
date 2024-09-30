@@ -11,30 +11,84 @@ export const workExperience = [
 	{
 		company: "Into The Air Band",
 		image: "https://res.cloudinary.com/dbfh15hki/image/upload/v1726967227/air_lrvp4e.png",
+		roles: ["Co-founder & Manager", "Artist", "Guitarist", "Producer"],
+		period: {
+			start: "April 2022",
+			end: "September 2024",
+		},
+		description:
+			"Co-founded and managed the band Into The Air from April 2022 to September 2024. Also served as the Producer and Guitarist, contributing to all of the band's projects during this period.",
 	},
 	{
 		company: "Chillies",
 		image: "https://res.cloudinary.com/dbfh15hki/image/upload/v1726967227/chillies_dr6suj.png",
+		roles: ["Assistant Manager", "Sound Technician"],
+		period: {
+			start: "December 2023",
+			end: "Present",
+		},
+		description:
+			"Assistant Manager and Sound Technician for the band Chillies. Responsible for ensuring that the band's performances meet their sound system requirements and performance schedules.",
 	},
 	{
 		company: "The Flob",
 		image: "https://res.cloudinary.com/dbfh15hki/image/upload/v1726967228/flob_f65125.png",
+		roles: ["Assistant Manager", "Sound Technician"],
+		period: {
+			start: "August 2022",
+			end: "October 2023",
+		},
+		description:
+			"Served as Assistant Manager and Sound Technician for the band The Flob. Participated in producing Music Videos, Live Session, and Live Stage projects for the band.",
 	},
 	{
 		company: "The Cassette",
 		image: "https://res.cloudinary.com/dbfh15hki/image/upload/v1726967227/cass_eids8a.jpg",
+		roles: ["Drum Technician"],
+		period: {
+			start: "May 2024",
+			end: "Present",
+		},
+		description:
+			"Responsible for setting up the drum tech as required by the band and managing the Backing track - Click - In-ear Monitor system during live stages.",
 	},
 	{
 		company: "1010 Network Company Limited",
 		image: "https://res.cloudinary.com/dbfh15hki/image/upload/v1726967227/1010_izjnjw.png",
+		roles: [
+			"Assistant Manager",
+			"Production Assistant",
+			"Sound Technician",
+		],
+		period: {
+			start: "August 2022",
+			end: "October 2023",
+		},
+		description:
+			"Handled the role of Production Assistant for TVC, Showcase, and Music Video projects. Also served as Assistant Manager for the company's artists.",
 	},
 	{
 		company: "TenCue Agency",
 		image: "https://res.cloudinary.com/dbfh15hki/image/upload/v1726967227/tencue_rn16at.jpg",
+		roles: ["Production Assistant"],
+		period: {
+			start: "June 2024",
+			end: "Present",
+		},
+		location: "Phu Quoc, Vietnam",
+		description:
+			"TenCue is an agency from California, USA. In 2024, I was recruited as a Production Assistant when the company produced an event in Phu Quoc, Vietnam, guiding them to work within the Vietnamese environment.",
 	},
 	{
 		company: "Vinama Joint Stock Company",
 		image: "https://res.cloudinary.com/dbfh15hki/image/upload/v1726967227/vinama_ebqavx.png",
+		roles: ["Internship"],
+		period: {
+			start: "July 2023",
+			end: "October 2023",
+		},
+		description:
+			"Interned in the Marketing Department at Vinama, a reputable company specializing in outdoor advertising and organizing prestigious advertising events in Vietnam.",
 	},
 ];
 
@@ -196,6 +250,31 @@ export const projects = [
 				name: "Viết Cho Em - Live at Band Đấu",
 				video: "https://www.youtube.com/embed/cLUQkTImsnw?si=7z1R3P7_I0y6UL-L",
 			},
+		],
+	},
+];
+
+export const charities = [
+	{
+		name: "Trao cho hộ gia đình có hoàn cảnh khó khăn",
+		images: [
+			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009758/IMG_5944_gckcmd.jpg",
+			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009757/IMG_5943_ywd0ex.jpg",
+		],
+	},
+	{
+		name: "Trao cho học sinh sinh viên khó khăn",
+		images: [
+			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009872/IMG_5941_auxssw.jpg",
+			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009854/IMG_5942_yjo1ww.jpg",
+		],
+	},
+	{
+		name: "Trao cho các em học sinh khó khăn huyện U Minh tỉnh Cà Mau",
+		images: [
+			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009923/IMG_5940_y209vg.jpg",
+			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009922/IMG_5938_jnen6t.jpg",
+			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009922/IMG_5939_j7edgo.jpg",
 		],
 	},
 ];

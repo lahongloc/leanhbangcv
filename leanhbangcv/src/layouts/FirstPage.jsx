@@ -17,7 +17,7 @@ const FirstPage = () => {
 				<h1
 					style={{
 						fontSize: "4rem",
-						marginTop: 120,
+						marginTop: 375,
 						// marginLeft: -70,
 						backgroundColor: "rgba(216, 216, 216, 0.5)",
 						fontFamily: "arial",

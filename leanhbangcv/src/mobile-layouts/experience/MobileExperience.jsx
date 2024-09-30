@@ -1,36 +1,67 @@
 import React from "react";
-import { Card, Row, Col } from "antd";
-import "./Experience.css"; // File CSS đã cập nhật
+import { Timeline, Typography, Tag, Card } from "antd";
+import { ClockCircleOutlined, CalendarOutlined } from "@ant-design/icons";
 import { workExperience } from "../../database/data";
+
+const { Title, Text } = Typography;
 
 const MobileExperience = () => {
 	return (
-		<div style={{ marginTop: "-5rem" }}>
-			<h1 style={{ color: "#fff" }}>MY EXPERIENCE</h1>
-			<div className="work-experience-mobile-container">
-				<Row gutter={[16, 16]} justify="center">
-					{workExperience.map((item, index) => (
-						<Col key={index} xs={12}>
-							{" "}
-							{/* Mỗi `Col` chiếm một nửa màn hình */}
-							<Card
-								hoverable
-								className="mobile-company-card"
-								cover={
-									<img
-										src={item.image}
-										alt={item.company}
-										className="mobile-company-image"
-									/>
-								}
-							>
-								<Card.Meta title={item.company} />
-							</Card>
-						</Col>
-					))}
-				</Row>
-			</div>
-		</div>
+		<Card
+			style={{
+				backgroundColor: "rgb(0, 0, 0, 0.8)",
+				color: "#fff",
+				width: "100%",
+				margin: "auto",
+				marginTop: "-3rem",
+			}}
+		>
+			<Title level={2} style={{ color: "yellow", textAlign: "left" }}>
+				Work Experience
+			</Title>
+			<Timeline mode="left" style={{ color: "#fff" }}>
+				{workExperience.map((experience, index) => (
+					<Timeline.Item
+						key={index}
+						color={
+							experience.period.end === "Present"
+								? "green"
+								: "blue"
+						}
+					>
+						<div
+							style={{ marginBottom: "10px", textAlign: "left" }}
+						>
+							<span style={{ color: "#fff" }}>
+								<CalendarOutlined style={{ marginRight: 5 }} />
+								{experience.period.start} -{" "}
+								{experience.period.end}
+							</span>
+							<Title level={4} style={{ color: "#fff" }}>
+								{experience.company}
+							</Title>
+							<div>
+								{experience.roles.map((role, idx) => (
+									<Tag
+										key={idx}
+										color="blue"
+										style={{
+											marginBottom: "5px",
+											fontSize: "14px",
+										}}
+									>
+										{role}
+									</Tag>
+								))}
+							</div>
+							<Text style={{ color: "#fff" }}>
+								{experience.description}
+							</Text>
+						</div>
+					</Timeline.Item>
+				))}
+			</Timeline>
+		</Card>
 	);
 };
 
