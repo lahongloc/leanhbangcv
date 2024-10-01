@@ -256,21 +256,21 @@ export const projects = [
 
 export const charities = [
 	{
-		name: "Trao cho hộ gia đình có hoàn cảnh khó khăn",
+		name: "Given to households in difficult circumstances",
 		images: [
 			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009758/IMG_5944_gckcmd.jpg",
 			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009757/IMG_5943_ywd0ex.jpg",
 		],
 	},
 	{
-		name: "Trao cho học sinh sinh viên khó khăn",
+		name: "Given to students in difficulty",
 		images: [
 			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009872/IMG_5941_auxssw.jpg",
 			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009854/IMG_5942_yjo1ww.jpg",
 		],
 	},
 	{
-		name: "Trao cho các em học sinh khó khăn huyện U Minh tỉnh Cà Mau",
+		name: "Awarded to disadvantaged students in U Minh district, Ca Mau province",
 		images: [
 			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009923/IMG_5940_y209vg.jpg",
 			"https://res.cloudinary.com/dbfh15hki/image/upload/v1727009922/IMG_5938_jnen6t.jpg",

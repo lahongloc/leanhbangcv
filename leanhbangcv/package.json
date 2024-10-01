@@ -1,10 +1,13 @@
 {
+  "homepage": "https://lahongloc.github.io/leanhbangcv",
   "name": "leanhbangcv",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

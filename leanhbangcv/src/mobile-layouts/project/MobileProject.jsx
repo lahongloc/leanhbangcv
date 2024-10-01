@@ -61,7 +61,7 @@ const MobileProject = () => {
 		<div className="project-container">
 			<Select
 				defaultValue={selectedProject.project}
-				style={{ width: "100%", marginBottom: 20 }}
+				style={{ width: "100%", marginBottom: 20, marginTop: 100 }}
 				onChange={handleChange}
 				className="project-selector"
 			>
